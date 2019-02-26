@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.attra.driverscript.Driverscript;
 
 public class AMSPage extends Driverscript
-{
+{   
 	@FindBy(css="a#ctl00_LoginStatus2")
 	private WebElement loginClickEle;
 
