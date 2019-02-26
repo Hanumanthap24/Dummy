@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="39629" started-at="2019-02-22T06:45:03Z" finished-at="2019-02-22T06:45:43Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="39629" started-at="2019-02-22T06:45:03Z" finished-at="2019-02-22T06:45:43Z">
+      <class name="com.attra.testcases.AccountDeatilsFetch">
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.attra.testcases.AccountDeatilsFetch@f79e]" name="preCondition" is-config="true" duration-ms="15" started-at="2019-02-22T06:45:03Z" finished-at="2019-02-22T06:45:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method status="PASS" signature="fetchDetailsAccountDetails()[pri:0, instance:com.attra.testcases.AccountDeatilsFetch@f79e]" name="fetchDetailsAccountDetails" duration-ms="39591" started-at="2019-02-22T06:45:03Z" finished-at="2019-02-22T06:45:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchDetailsAccountDetails -->
+      </class> <!-- com.attra.testcases.AccountDeatilsFetch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,37 @@
+<font size='4'>Monthly In and Out report for the Period of 18/07/2017 to 31/07/2017</font><font size='1'></font><style> .text { mso-number-format:\@; } </style> <div>
+	<table cellspacing="0" cellpadding="3" rules="all" border="1" id="ctl00_maincontent_GridView1" style="border-collapse:collapse;">
+		<tr style="background-color:#507CD1;">
+			<th scope="col">Date</th><th scope="col">Shift</th><th scope="col">Status</th><th scope="col">Time In</th><th scope="col">Time Out</th><th scope="col">Total Hrs Worked</th><th scope="col">Late Hrs</th><th scope="col">Early Left Hrs</th><th scope="col">OT Hrs</th>
+		</tr><tr style="background-color:#ECECEC;">
+			<td class="text" colspan="9" style="font-size:10pt;font-weight:bold;">Employee code/Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;322732 - Yogesh Thimmappa</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">18/07/2017</td><td class="text" style="width:50px;">GS1</td><td class="text" style="width:50px;">PP</td><td class="text" style="width:60px;">08:56</td><td class="text" style="width:60px;">18:19</td><td class="text" style="width:60px;">09:23</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">19/07/2017</td><td class="text" style="width:50px;">GS1</td><td class="text" style="width:50px;">PP</td><td class="text" style="width:60px;">09:05</td><td class="text" style="width:60px;">17:59</td><td class="text" style="width:60px;">08:54</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">20/07/2017</td><td class="text" style="width:50px;">GS1</td><td class="text" style="width:50px;">PP</td><td class="text" style="width:60px;">09:11</td><td class="text" style="width:60px;">16:59</td><td class="text" style="width:60px;">07:48</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">21/07/2017</td><td class="text" style="width:50px;">GS1</td><td class="text" style="width:50px;">PP</td><td class="text" style="width:60px;">09:33</td><td class="text" style="width:60px;">17:25</td><td class="text" style="width:60px;">07:52</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">22/07/2017</td><td class="text" style="width:50px;">&nbsp;</td><td class="text" style="width:50px;">WO</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">23/07/2017</td><td class="text" style="width:50px;">&nbsp;</td><td class="text" style="width:50px;">WO</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">24/07/2017</td><td class="text" style="width:50px;">GS1</td><td class="text" style="width:50px;">PP</td><td class="text" style="width:60px;">08:53</td><td class="text" style="width:60px;">17:08</td><td class="text" style="width:60px;">08:15</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">25/07/2017</td><td class="text" style="width:50px;">GS1</td><td class="text" style="width:50px;">PP</td><td class="text" style="width:60px;">08:58</td><td class="text" style="width:60px;">17:02</td><td class="text" style="width:60px;">08:04</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">26/07/2017</td><td class="text" style="width:50px;">GS1</td><td class="text" style="width:50px;">PP</td><td class="text" style="width:60px;">09:10</td><td class="text" style="width:60px;">16:42</td><td class="text" style="width:60px;">07:32</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">27/07/2017</td><td class="text" style="width:50px;">&nbsp;</td><td class="text" style="width:50px;">PL</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">28/07/2017</td><td class="text" style="width:50px;">&nbsp;</td><td class="text" style="width:50px;">PL</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">29/07/2017</td><td class="text" style="width:50px;">&nbsp;</td><td class="text" style="width:50px;">WO</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">30/07/2017</td><td class="text" style="width:50px;">&nbsp;</td><td class="text" style="width:50px;">WO</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr><tr style="border-color:Blue;">
+			<td class="text" style="width:90px;">31/07/2017</td><td class="text" style="width:50px;">GS1</td><td class="text" style="width:50px;">PP</td><td class="text" style="width:60px;">09:01</td><td class="text" style="width:60px;">17:04</td><td class="text" style="width:60px;">08:03</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">00:00</td><td class="text" style="width:60px;">&nbsp;</td>
+		</tr>
+	</table>
+</div>
