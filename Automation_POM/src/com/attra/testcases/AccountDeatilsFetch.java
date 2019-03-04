@@ -31,11 +31,7 @@ public class AccountDeatilsFetch extends Driverscript {
 				loginPage.getUserName().sendKeys(dataHashMap.get("UserName"));
 				loginPage.getPassword().sendKeys(dataHashMap.get("Password"));
 				loginPage.getSubmitButton().click();
-						
-
-
-					
-
+	
 				WebDriverUtils.expilicitWait(driver,
 						driver.findElement(By.xpath("//*[@id='side-menu']//i[@class='fa fa-desktop']")), 30);
 				Actions actions = new Actions(driver);
