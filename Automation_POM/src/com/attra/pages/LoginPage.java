@@ -1,10 +1,12 @@
 package com.attra.pages;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.attra.driverscript.Driverscript;
+import com.attra.utils.WebDriverUtils;
 
 public class LoginPage extends Driverscript {
     public  WebDriver driver;
@@ -33,6 +35,18 @@ public class LoginPage extends Driverscript {
 	
 	@FindBy(id="submitButton")
 	private WebElement submitButton;
+	
+	  public void loginToApp(String userName, String password) {
+
+          getUserName().sendKeys(userName);
+          getPassword().sendKeys(password);
+          getSubmitButton().click();
+
+          WebDriverUtils.expilicitWait(driver,
+                                          driver.findElement(By.xpath("//*[@id='side-menu']//i[@class='fa fa-desktop']")), 30);
+
+}
+
 
 }
 

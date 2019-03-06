@@ -16,6 +16,7 @@ import com.attra.pages.LoginPage;
 import com.attra.testcases.AccountDeatilsFetch;
 import com.attra.pages.AMSPage;
 import com.attra.pages.AccountDetails;
+import com.attra.pages.FASPage;
 import com.attra.utils.AppIndependant;
 import com.attra.utils.Initialize;
 
@@ -41,6 +42,7 @@ public class Driverscript
 	public static String beforeMoving="C:\\Users\\yogesh.thimmappa\\Downloads\\",afterMoving=System.getProperty("user.dir")+"\\Results\\ResultExcel\\";
 	public static String sheet;
 	public static HashMap<String, String> dataHashMap;
+	public static FASPage fasPage=null;
 	
 	@BeforeClass
 	public void preCondition()

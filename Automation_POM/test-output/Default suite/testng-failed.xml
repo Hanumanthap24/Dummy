@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.attra.testcases.AccountDeatilsFetch">
+      <class name="com.attra.testcases.FAS.DataManagement">
         <methods>
-          <include name="fetchDetailsAccountDetails"/>
           <include name="preCondition"/>
+          <include name="batchAuthorizationDetailLog"/>
         </methods>
-      </class> <!-- com.attra.testcases.AccountDeatilsFetch -->
+      </class> <!-- com.attra.testcases.FAS.DataManagement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
