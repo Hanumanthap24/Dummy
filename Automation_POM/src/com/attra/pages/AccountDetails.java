@@ -441,7 +441,7 @@ public static HashMap<String, String> getdefaultInputText(HashMap<String, String
 		
 	}
 
-public void getTableData() {
+public static void getTableData() {
 	
 	String actual = "";
 	
@@ -502,20 +502,5 @@ public void getTableData() {
 		}
 	
 }
-
-public static String sheetname()
-{
-	String sheet= driver.findElement(By.xpath("//div[@class='ibox-title {1}']/h4/span[@id='linkName']")).getText().replace("/", "_");
-	//String[] str1 = sheet.split(" ");
-	//String sheetName_dynamic = str1[3].concat(" ").concat(str1[5]);
-	String sheetName_dynamic[] = sheet.split("-");
-	String sheet1="";
-	for (int i = 1; i < sheetName_dynamic.length; i++) {
-		sheet1=sheet1+ sheetName_dynamic[i];
-	}
-	return sheet1;
-}
-
-
 
 }

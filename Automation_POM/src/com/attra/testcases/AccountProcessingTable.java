@@ -16,13 +16,13 @@ import com.attra.pages.LoginPage;
 import com.attra.utils.AppIndependant;
 import com.attra.utils.WebDriverUtils;
 
-public class AccountDeatilsFetch extends Driverscript {
+public class AccountProcessingTable extends Driverscript {
 
-	@Test(enabled = true,priority=1)
+	@Test(enabled = true)
 	public void fetchDetailsAccountDetails() {
 		HashMap<String, String> dataHashMap;
 		HashMap<String, String> dataOutputHashmap = new HashMap<String, String>();
-		dataHashMap = Datatable.getCellData(datasheet, "Sheet1", 1);
+		dataHashMap = Datatable.getCellData(datasheet, "Sheet1", 2);
 		if (dataHashMap.get("RunStatus").equalsIgnoreCase("Y")) {
 			try {
 				Driverscript.runner(dataHashMap);
@@ -30,35 +30,24 @@ public class AccountDeatilsFetch extends Driverscript {
 				initElements();
 				// Thread.sleep(10000);
 				loginPage.login(dataHashMap);
-			
-				WebDriverUtils.expilicitWait(driver,
-						driver.findElement(By.xpath("//*[@id='side-menu']//i[@class='fa fa-desktop']")), 30);
-				Actions actions = new Actions(driver);
-				actions.moveToElement(driver.findElement(By.xpath("//*[@id='side-menu']//i[@class='fa fa-desktop']")))
-						.click();
-				Thread.sleep(3000);
-				actions.click(driver
-						.findElement(By.xpath("//*[@id='appMenuList']//a[contains(.,'Customer Management System')]")))
-						.click();
-				Thread.sleep(3000);
-				actions.click(driver.findElement(By.xpath(
-						"//*[@id='appMenuList']//a[contains(.,'Customer Management System')]/../ul/li[contains(.,'Data Management')]")))
-						.click().build().perform();
-
+				Thread.sleep(20000);
+				
 				System.out.println("exe========");
-				Thread.sleep(5000);
+				
+				driver.navigate().to("https://si28.visionplus.io/ds1o/#!/appView/Customer_Management_System_Parameter_Management");
+				
+				
 				WebElement ele = driver
-						.findElement(By.xpath("//div[@class='animated fadeIn']/a[text() = 'Account Details']"));
+						.findElement(By.xpath("//div[@class='animated fadeIn']/a[text() = 'Account Processing Table']"));
 				JavascriptExecutor js = (JavascriptExecutor) driver;
 				js.executeScript("arguments[0].click();", ele);
 
 				Thread.sleep(5000);
-				accountDetails.getBusinessUnit().sendKeys(dataHashMap.get("BusinessUnit"));
-				accountDetails.getAccountNumber().clear();
-				accountDetails.getAccountNumber().sendKeys(dataHashMap.get("AccountNumber"));
-				accountDetails.getProduct().sendKeys(dataHashMap.get("Product"));
-				accountDetails.getBillingAcctInd().sendKeys(dataHashMap.get("BillingAcctInd"));
-				accountDetails.getQuery().click();
+				driver.findElement(By.xpath("//a[contains(.,'Business Unit*')]/following::input[1]")).sendKeys(dataHashMap.get("BusinessUnit"));
+				driver.findElement(By.xpath("//a[contains(.,'Product*')]/following::input[1]")).sendKeys(dataHashMap.get("Product"));
+				driver.findElement(By.xpath("//a[contains(.,'Table Number*')]/following::input[1]")).sendKeys(dataHashMap.get("TableNumber"));
+				driver.findElement(By.xpath("//button[contains(.,'Query')]")).click();
+				
 				Thread.sleep(5000);
 
 				for (int i = 0; i <27; i++) {
@@ -83,7 +72,6 @@ public class AccountDeatilsFetch extends Driverscript {
 
 	}
 
-	
 	public void initElements() {
 		loginPage = new LoginPage(driver);
 		accountDetails = new AccountDetails(driver);

@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
@@ -22,7 +23,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.attra.datatable.Datatable;
 import com.attra.driverscript.Driverscript;
+import com.attra.testcases.Webtable_utility;
+
+import dummy.Test1;
 
 public class AppIndependant extends Driverscript {
 	/*
@@ -309,5 +314,168 @@ public class AppIndependant extends Driverscript {
 		return hMap;
 
 	}
+	
+	public static void getTablevalue(HashMap<String, String> hMap, WebDriver driver,String SheetName,String sheetPath) throws Exception {
+
+		List<WebElement> list = driver
+				.findElements(By.xpath("//table[contains(@id,'table')]"));
+
+		String actual = "";
+		if(list.size()<1) {
+			return;
+			
+		}
+
+		for (int i = 0; i < list.size(); i++)
+
+		{
+			String id=list.get(i).getAttribute("id");
+			String [][]values=Webtable_utility.getTableData(driver,"//table[@id='"+id+"']");
+			Test1.ArrayToexcel(sheetPath,SheetName,values);
+	
+
+		}
+	}
+	
+
+public static String sheetname(WebDriver driver)
+{
+	String sheet= driver.findElement(By.xpath("//div[@class='ibox-title {1}']/h4/span[@id='linkName']")).getText().replace("/", "_");
+	//String[] str1 = sheet.split(" ");
+	//String sheetName_dynamic = str1[3].concat(" ").concat(str1[5]);
+	String sheetName_dynamic[] = sheet.split("-");
+	String sheet1="";
+	for (int i = 1; i < sheetName_dynamic.length; i++) {
+		sheet1=sheet1+ sheetName_dynamic[i];
+	}
+	return sheet1;
+}
+
+
+public static void navigateAndCapture(int pageNumberToNavigate,int startfrom) throws Exception {
+	
+	HashMap<String, String> dataOutputHashmap=null;
+	
+	List<WebElement> eleLinks = driver.findElements(By.xpath("//*[@id='siblingLinks']/ul/li/a"));
+
+	int link_size = eleLinks.size();
+
+
+	Thread.sleep(10000);
+	for (int K = 1; K <= pageNumberToNavigate - 1; K++) {
+
+		System.out.println(eleLinks.get(startfrom).getText());
+
+		dataOutputHashmap = AppIndependant.getdefaulttext(dataOutputHashmap, driver);
+
+		dataOutputHashmap = AppIndependant.getdefaultInputText(dataOutputHashmap, driver);
+
+		String strSheetName = eleLinks.get(startfrom).getText().split("-")[1];
+
+		Datatable.saveFetchedValuesToExcel(dataOutputSheet, AppIndependant.sheetname(driver), 1, 1,
+				dataOutputHashmap);
+
+		Thread.sleep(1000);
+
+		eleLinks.get(K).click();
+
+		eleLinks = driver.findElements(By.xpath("//*[@id='siblingLinks']/ul/li/a"));
+
+		Thread.sleep(2000);
+
+		dataHashMap.clear();
+		startfrom++;
+
+	
+}
+
+
+}
+public static void getValuesToFile(String strFileName){
+
+    
+
+    HashMap<String, String> dataOutputHashmap = new HashMap<String, String>();            
+
+    try {
+
+           List<WebElement> eleLinks = driver.findElements(By.xpath("//*[@id='siblingLinks']/ul/li/a"));            
+
+           int link_size= eleLinks.size();                             
+
+           for(int i=0;i<=link_size-1;i++){
+
+                 eleLinks.get(i).click();
+
+                 Thread.sleep(10000);
+
+                 eleLinks = driver.findElements(By.xpath("//*[@id='siblingLinks']/ul/li/a"));
+
+                 dataOutputHashmap = AppIndependant.getdefaulttext(dataOutputHashmap, driver);
+
+               dataOutputHashmap = AppIndependant.getdefaultInputText(dataOutputHashmap,driver);
+
+               String strSheetName = eleLinks.get(i).getText();//.split("-")[1];
+
+               Datatable.saveFetchedValuesToExcel(strFileName, strSheetName, 1, 1, dataOutputHashmap);
+
+                 Thread.sleep(2000);
+
+               dataOutputHashmap.clear();
+
+           }
+
+    } catch (InterruptedException e) {
+
+           //  TODO Auto-generated catch block
+
+           e.printStackTrace();
+
+    }
+
+}
+
+public static String clickLeftMenu(WebDriver driver, List<WebElement> eleLinks, int k) throws Exception {
+
+
+	WebElement element = eleLinks.get(k);
+
+
+	String str = element.getText();
+
+
+	if (k > 0) {
+
+
+	 
+
+
+	element.click();
+
+
+	Thread.sleep(10000);
+
+
+	return str;
+
+
+	 
+
+
+	} else {
+
+
+	return str;
+
+
+	}
+
+
+	 
+
+
+	}
+
+
 
 }

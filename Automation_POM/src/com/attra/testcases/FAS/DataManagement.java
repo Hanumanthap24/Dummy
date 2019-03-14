@@ -24,7 +24,7 @@ public class DataManagement extends Driverscript {
 			Driverscript.runner(dataHashMap);
 			driver.get(dataHashMap.get("Url"));
 			initElements();
-			loginPage.loginToApp(dataHashMap.get("UserName"), dataHashMap.get("Password"));
+			loginPage.login(dataHashMap);
 			Thread.sleep(5000);
 			fasPage.navigateToDataManagement();
 			fasPage.clickOnBatchAuthorizationDetailLog();

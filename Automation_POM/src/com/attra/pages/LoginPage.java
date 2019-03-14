@@ -1,4 +1,6 @@
 package com.attra.pages;
+import java.util.HashMap;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,16 +38,21 @@ public class LoginPage extends Driverscript {
 	@FindBy(id="submitButton")
 	private WebElement submitButton;
 	
-	  public void loginToApp(String userName, String password) {
-
-          getUserName().sendKeys(userName);
-          getPassword().sendKeys(password);
+	  public void login(HashMap<String , String> dataHashMap) {
+		  
+          getUserName().sendKeys(dataHashMap.get("UserName"));
+          getPassword().sendKeys(dataHashMap.get("Password"));
           getSubmitButton().click();
 
           WebDriverUtils.expilicitWait(driver,
-                                          driver.findElement(By.xpath("//*[@id='side-menu']//i[@class='fa fa-desktop']")), 30);
+          driver.findElement(By.xpath("//*[@id='side-menu']//i[@class='fa fa-desktop']")), 30);
 
 }
+
+	public void logout() {
+	
+		
+	}
 
 
 }
